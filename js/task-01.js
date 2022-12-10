@@ -1,10 +1,10 @@
-const listUl = document.querySelectorAll('.item');
-console.log('Number of categories: ', listUl.length);
+const listUl = document.querySelector('#categories');
+console.log('Number of categories: ', listUl.children.length);
 
 console.log('');
 
-const firstElem = listUl[0].childNodes[1].textContent;
-const numberOfFirstElem = listUl[0].childNodes[3].childElementCount;
+const firstElem = listUl.children[0].children[0].textContent;
+const numberOfFirstElem = listUl.children[0].children[1].children.length;
 
 console.log('Category: ', firstElem);
 console.log('Elements: ', numberOfFirstElem);
@@ -12,16 +12,16 @@ console.log('Elements: ', numberOfFirstElem);
 
 console.log('');
 
-const secondElem = listUl[1].childNodes[1].textContent;
-const numberOfSecondElem = listUl[1].childNodes[3].childElementCount;
+const secondElem = listUl.children[1].children[0].textContent;
+const numberOfSecondElem = listUl.children[1].children[1].children.length;
 
 console.log('Category: ', secondElem);
 console.log('Elements: ', numberOfSecondElem);
 
 console.log('');
 
-const thirdElem = listUl[2].childNodes[1].textContent;
-const numberOfthirdElem = listUl[2].childNodes[3].childElementCount;
+const thirdElem = listUl.children[2].children[0].textContent;
+const numberOfthirdElem = listUl.children[2].children[1].children.length;
 
 console.log('Category: ', thirdElem);
 console.log('Elements: ', numberOfthirdElem);
