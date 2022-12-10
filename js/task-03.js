@@ -18,7 +18,7 @@ const list = document.querySelector(".gallery");
 const murkup = images
   .map(
     ({ url, alt }) => `<li>
-   <img src="${url}" alt="${alt}" width = "300">
+   <img src="${url}" alt="${alt}" class = "box">
    </li>`
   )
   .join("");
