@@ -1,29 +1,14 @@
-const listUl = document.querySelector('#categories');
-console.log('Number of categories: ', listUl.children.length);
+const listUl = document.querySelector("#categories");
+console.log("Number of categories: ", listUl.children.length);
 
-console.log('');
+const listLi = document.querySelectorAll(".item");
 
-const listLi = document.querySelectorAll('.item');
+for (let i = 0; i < listUl.children.length; i += 1) {
+  const category = listLi[i].children[0].textContent;
+  const elements = listLi[i].children[1].children.length;
 
-const firstElem = listLi[0].children[0].textContent;
-const numberOfFirstElem = listLi[0].children[1].children.length;
+  console.log("");
 
-console.log('Category: ', firstElem);
-console.log('Elements: ', numberOfFirstElem);
-
-
-console.log('');
-
-const secondElem = listLi[1].children[0].textContent;
-const numberOfSecondElem = listLi[1].children[1].children.length;
-
-console.log('Category: ', secondElem);
-console.log('Elements: ', numberOfSecondElem);
-
-console.log('');
-
-const thirdElem = listLi[2].children[0].textContent;
-const numberOfthirdElem = listLi[2].children[1].children.length;
-
-console.log('Category: ', thirdElem);
-console.log('Elements: ', numberOfthirdElem);
+  console.log("Category: ", category);
+  console.log("Elements: ", elements);
+}
