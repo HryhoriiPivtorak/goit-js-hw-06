@@ -10,7 +10,7 @@ function onInputBlur(event) {
     }
     input.classList.add("valid");
 
-  } else if (event.currentTarget.value.length === 0) {
+  } else if (!event.currentTarget.value.length) {
     if (input.classList.contains("valid")) {
       input.classList.remove("valid");
     }else if(input.classList.contains("invalid")){
