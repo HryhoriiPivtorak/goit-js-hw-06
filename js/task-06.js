@@ -3,17 +3,24 @@ const input = document.querySelector("#validation-input");
 input.addEventListener("blur", onInputBlur);
 
 function onInputBlur(event) {
-  console.log(input.dataset.length);
-  console.log(event.currentTarget.value.length);
 
   if (event.currentTarget.value.length == input.dataset.length) {
-    input.setAttribute("id", "validation-input.valid");
-    console.log("Valid");
+    if(input.classList.contains("invalid")){
+      input.classList.remove("invalid");
+    }
+    input.classList.add("valid");
+
   } else if (event.currentTarget.value.length === 0) {
-    input.setAttribute("id", "validation-input");
-    console.log("Basic");
+    if (input.classList.contains("valid")) {
+      input.classList.remove("valid");
+    }else if(input.classList.contains("invalid")){
+      input.classList.remove("invalid");
+    }
+
   } else {
-    input.setAttribute("id", "validation-input.invalid");
-    console.log("Invalid");
+    if (input.classList.contains("valid")) {
+      input.classList.remove("valid");
+    }
+    input.classList.add("invalid");
   }
 }
